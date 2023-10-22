@@ -1,10 +1,10 @@
 #!/bin/sh
 
-git filter-branch --env-filter '
+git filter-branch -f --env-filter '
 
-OLD_EMAIL="avhkbcj99@gmail.com"
-CORRECT_NAME="avhkbcj99"
-CORRECT_EMAIL="avhkbcj99@hotmail.com"
+OLD_EMAIL=""
+CORRECT_NAME=""
+CORRECT_EMAIL=""
 
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
@@ -17,3 +17,5 @@ then
     export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
+
+git push origin main --force
