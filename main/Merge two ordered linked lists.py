@@ -25,10 +25,10 @@
 l1 和 l2 均按 非递减顺序 排列
 """
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 # Compare this snippet from main/merge%20two%20sorted%20lists.py:
 
 
